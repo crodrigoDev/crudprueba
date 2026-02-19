@@ -13,7 +13,7 @@
             <th>MARCA</th>
             <th>STOCK</th>
             <th>PRECIO</th>
-            <th><a href="add.php">Agregar</a> </th>
+            <th><a href="add.html">Agregar</a> </th>
         </thead>
         <Tbody>
             <?php
