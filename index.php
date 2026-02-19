@@ -13,6 +13,7 @@
             <th>MARCA</th>
             <th>STOCK</th>
             <th>PRECIO</th>
+            <th><a href="add.php">Agregar</a> </th>
         </thead>
         <Tbody>
             <?php
@@ -30,6 +31,7 @@
                         <th><?php echo $row["Stock"]?></th>
                         <th><?php echo $row["Precio"]?></th>
                         <th><a href="update.php?id=<?php echo $row["Id"]?>" >update</a></th>
+                        <th><a href="delete.php?id=<?php echo $row["Id"]?>" >delete</a></th>
                     </tr>
 
                     <?php

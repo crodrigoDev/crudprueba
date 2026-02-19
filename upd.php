@@ -8,7 +8,7 @@
     $stock = $_POST["stock"];
     $precio = $_POST["precio"];
 
-    $sql = mysqli_query($cn, "call updproducto($id, $nombre, $marca, $stock, $precio)");
+    $sql = mysqli_query($cn, "call updproducto($id, '$nombre', '$marca', $stock, $precio)");
 
     if($sql){
         Header("Location:index.php");
