@@ -27,9 +27,9 @@ CREATE TABLE `producto` (
   `Nombre` varchar(50) NOT NULL,
   `Marca` varchar(100) NOT NULL,
   `Stock` int(11) NOT NULL,
-  `Precio` decimal(10,0) NOT NULL,
+  `Precio` decimal(9,2) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (1,'Televisor 4K','LG',15,2000),(2,'Radio FM','Sony',30,400),(3,'Horno Electrico','Indurama',10,1200);
+INSERT INTO `producto` VALUES (1,'Televisor 4K','LG',15,2000.00),(2,'Radio FM','Sony',30,400.00),(3,'Horno Electrico','Indurama',10,1200.00),(6,'Polo Manga Larga','HyM',100,39.00),(7,'Casaca','Topitop',50,60.00),(8,'Celular Moto G15','Motorola',100,500.00),(9,'Television Samsung UHD','Samsung',10,1800.00);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,13 +53,13 @@ UNLOCK TABLES;
 /*!50003 SET character_set_results = utf8mb4 */ ;
 /*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
+/*!50003 SET sql_mode              = 'NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `addproducto`(
 	name varchar(50),
     marc varchar(100),
     stk int,
-    price decimal
+    price decimal(9,2)
 )
 insert producto (Nombre, Marca, Stock, Precio) values(name, marc, stk, price) ;;
 DELIMITER ;
@@ -94,9 +94,9 @@ DELIMITER ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
 /*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
+/*!50003 SET sql_mode              = 'NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `updproducto`(`cod` INT, `name` VARCHAR(50), `marc` VARCHAR(100), `stk` INT, `price` DECIMAL)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `updproducto`(`cod` INT, `name` VARCHAR(50), `marc` VARCHAR(100), `stk` INT, `price` DECIMAL(9,2))
 update producto set Nombre=name, Marca=marc, Stock=stk, Precio=price where Id=cod ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -147,4 +147,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-19 15:21:09
+-- Dump completed on 2026-02-22 21:10:45
