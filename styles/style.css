@@ -1,0 +1,140 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    background-color: #f5f5f5;
+    padding: 2rem;
+}
+
+.container {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #4EA0AD;
+}
+
+.container__title {
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.table {
+    max-width: 85rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.form {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: #fff;
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form__input {
+    width: 100%;
+    padding: 1rem;
+    border: 0.1rem solid #ccc;
+    font-size: 1.6rem;
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: #4EA0AD;
+}
+
+.form__title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.form__actions {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.form__link {
+    display: block;
+    margin-top: 1.5rem;
+    color: #4EA0AD;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.btn--add {
+    background-color: #4EC94D;
+}
+
+.btn--edit {
+    background-color: #f0ad4e;
+}
+
+.btn--delete {
+    background-color: #FF1F1F;
+}
+
+.btn--full {
+    width: 100%;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #4EA0AD;
+    color: #fff;
+}
+
+thead th {
+    padding: 1rem;
+}
+
+tbody tr {
+    border-bottom: 0.1rem solid #ddd;
+}
+
+tbody th {
+    padding: 1rem;
+    font-weight: normal;
+}
+
+.btn--sm {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+}
